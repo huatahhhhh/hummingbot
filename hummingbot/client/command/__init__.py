@@ -2,6 +2,7 @@ from .balance_command import BalanceCommand
 from .config_command import ConfigCommand
 from .connect_command import ConnectCommand
 from .create_command import CreateCommand
+from .create_new_from_previous_strategy_command import CreateNewFromPreviousCommand
 from .exit_command import ExitCommand
 from .export_command import ExportCommand
 from .gateway_command import GatewayCommand
@@ -38,4 +39,5 @@ __all__ = [
     StatusCommand,
     StopCommand,
     TickerCommand,
+    CreateNewFromPreviousCommand
 ]
