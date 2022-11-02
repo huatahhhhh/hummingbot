@@ -882,7 +882,8 @@ def missing_required_configs_legacy(config_map):
     return [c for c in config_map.values() if c.required and c.value is None and not c.is_connect_key]
 
 
-def format_config_file_name(file_name):
+def format_config_file_name(file_name: str):
+    file_name = file_name.replace(' ', '_')
     if "." not in file_name:
         return file_name + ".yml"
     return file_name

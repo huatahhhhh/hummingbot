@@ -149,6 +149,9 @@ def load_parser(hummingbot: "HummingbotApplication", command_tabs) -> [ThrowingA
     previous_strategy_parser.add_argument("option", nargs="?", choices=["Yes,No"], default=None)
     previous_strategy_parser.set_defaults(func=hummingbot.previous_strategy)
 
+    create_from_previous_strategy_parser = subparsers.add_parser("create_from_previous", help="Creates a new strategy from the last strategy used")
+    create_from_previous_strategy_parser.set_defaults(func=hummingbot.create_new_from_previous_strategy)
+
     # add shortcuts so they appear in command help
     shortcuts = hummingbot.client_config_map.command_shortcuts
     for shortcut in shortcuts:
